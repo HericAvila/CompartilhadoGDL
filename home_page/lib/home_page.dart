@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // Tema da aplicação
@@ -23,7 +24,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  // É o widget de tela inicial.
   final String title;
 
   @override
@@ -31,15 +31,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
 
-  void _incrementCounter() {
-    setState(() {
-      //Atualiza valores de uma variavel.
-      _counter++;
-    });
+  void fazNadaAinda() {
+    setState(() {});
   }
 
   @override
