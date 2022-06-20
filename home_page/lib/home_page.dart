@@ -1,4 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:home_page/models/user_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +24,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class Usuario {
+  String nome, senha;
+
+  Usuario(
+    this.nome,
+    this.senha,
+  );
+}
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -31,12 +43,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController username = TextEditingController();
-  TextEditingController password = TextEditingController();
-
-  void fazNadaAinda() {
-    setState(() {});
-  }
+  TextEditingController _controladorNome = TextEditingController();
+  TextEditingController _controladorSenha = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,19 +58,30 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            //Image(image: ),
             TextField(
-              controller: username,
+              controller: _controladorNome,
               decoration: InputDecoration(
                   hintText: "Usuario",
                   labelText: "Usuário",
                   prefixIcon: Icon(Icons.person, color: Colors.orange)),
             ),
             TextField(
-              controller: password,
+              controller: _controladorSenha,
+              obscureText: true,
               decoration: InputDecoration(
                   hintText: "Senha",
                   labelText: "Senha",
                   prefixIcon: Icon(Icons.password, color: Colors.orange)),
+            ),
+            RaisedButton(
+              child: Text('Cadastrar'),
+              onPressed: () {
+                String nome = _controladorNome.text;
+                String senha = _controladorSenha.text;
+                final Usuario usuarioNovo = Usuario(nome, senha);
+                print(usuarioNovo);
+              },
             ),
           ],
         ),
