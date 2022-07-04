@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950481483134",
+    "project_id": "gdlapp-95dfa",
+    "storage_bucket": "gdlapp-95dfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950481483134:android:d81ec7d2615e5d5890ef2f",
+        "android_client_info": {
+          "package_name": "com.example.aplicativo_gdl_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950481483134-218jssa90dh2hrso9je4bdgcm1e0ases.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRbhxaWSOk5vP19G7dFzk-WMAfcKCvTEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950481483134-218jssa90dh2hrso9je4bdgcm1e0ases.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
